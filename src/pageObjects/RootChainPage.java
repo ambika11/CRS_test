@@ -1,0 +1,28 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class RootChainPage {
+	
+	WebDriver driver;
+	
+	@FindBy(className="card-gradient")
+	private WebElement rootchainCard;
+	
+	
+	public RootChainPage(WebDriver driver)
+	{
+		this.driver = driver;
+		PageFactory.initElements(driver, RootChainPage.class);
+	}
+	
+	public ChainListPage clickRootChainCard()
+	{
+		rootchainCard.click();
+		return new ChainListPage(driver);
+	}
+
+}
