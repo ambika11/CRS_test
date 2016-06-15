@@ -21,4 +21,4 @@ public class CreateBooking {
 	@FindBy(xpath="//*[@id='reservation_form_id']/div[1]/div/div/div[1]/div[2]/div/input")
 	private WebElement 
 
-}
+} 
